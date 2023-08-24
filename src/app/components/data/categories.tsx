@@ -1,0 +1,26 @@
+export default [
+    "Action",
+    "Romance",
+    "Horror",
+    "Drama",
+    "Science Fiction",
+    "Western",
+    "Comedy",
+    "Thriller",
+    "Crime",
+    "Fantasy",
+    "Adventure",
+    "Documentary",
+    "War",
+    "Animation",
+    "Dark Comedy",
+    "Historical Drama",
+    "Mystery",
+    "Film Noir",
+    "Experimental",
+    "Romantic Comedy",
+    "Slapstick",
+    "Historical Fiction",
+    "Mockumentary"
+
+]
