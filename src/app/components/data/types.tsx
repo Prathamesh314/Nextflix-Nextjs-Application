@@ -1,5 +1,4 @@
 export default[
     "Movie",
-    "Web Series",
-    "Anime"
+    "Web Series"
 ]

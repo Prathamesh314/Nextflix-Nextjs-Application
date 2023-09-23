@@ -1,9 +1,19 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { UserButton } from "@clerk/nextjs";
-import SearchIcon from '@mui/icons-material/Search';
+import { FetchFromApi } from './constants/FetchFromApi';
 
 function NavBar() {
+
+    
+    const [SearchTerm, setSearchTerm] = useState<any>('');
+    
+    const handleOnSubmit = async () =>{
+        const data = await FetchFromApi('12','title','all',SearchTerm);
+        console.log(data)
+    }
+
   return (
     <div className='flex w-full h-24 items-center justify-between bg-blue-950'>
         <div className='flex p-2'>
@@ -12,8 +22,8 @@ function NavBar() {
         </div>
         <div className='flex mt-2'>
             <div className='flex items-center justify-center mr-8'>
-                <input type='text' className='w-[320px] font-serif rounded-2xl p-2 text-black' placeholder='Search...'/>
-                <button>
+                <input type='text' className='w-[320px] font-serif rounded-2xl p-2 text-black' placeholder='Search...' onChange={(e)=>setSearchTerm(e.target.value)}/>
+                <button onClick={()=>{handleOnSubmit()}}>
                     <h2 className='w-15 text-3xl p-1 mr-4 items-center hover:scale-125 rounded-2xl transition-all'>🔍</h2>
                 </button>
                 <UserButton afterSignOutUrl="/"/>

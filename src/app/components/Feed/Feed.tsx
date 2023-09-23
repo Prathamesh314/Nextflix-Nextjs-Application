@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Videos from '../Videos'
 
-function Feed() {
+function Feed({videos}:{videos:any}) {
+
   return (
-    <div>Feed</div>
+    <div className='flex flex-col'>
+      <div>
+        <h2 className='text-[24px] font-semibold italic m-3 text-yellow-500 underline decoration-wavy'>Feed</h2>
+      </div>
+      <div>
+        <div className='flex'>
+          <Videos videos={videos}/>
+        </div>
+      </div>
+    </div>
   )
 }
 
