@@ -1,0 +1,23 @@
+export default [
+    'Action',
+    'Adventure',
+    'Fantasy',
+    'Animation',
+    'Drama',
+    'Horror',
+    'Comedy',
+    'History',
+    'Western',
+    'Thriller',
+    'Crime',
+    'Documentary',
+    'Science Fiction',
+    'Mystery',
+    'Music',
+    'Romance',
+    'Family',
+    'War',
+    'News',
+    'Reality',
+    'TalkShow'
+]

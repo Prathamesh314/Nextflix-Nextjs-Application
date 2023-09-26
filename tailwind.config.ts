@@ -15,7 +15,10 @@ const config: Config = {
       },
       rotate: {
         '17': '17deg',
-      }
+      },
+      fontFamily: {
+        custom: ['Mooli', 'sans'],
+      },
     },
   },
   plugins: [],

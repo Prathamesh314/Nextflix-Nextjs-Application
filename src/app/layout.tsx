@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
 import type { AppProps } from "next/app";
-import NavBar from './components/NavBar'
+import NavBar from '@/components/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
