@@ -1,8 +1,7 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { UserButton } from "@clerk/nextjs";
-import { FetchFromApi } from './constants/FetchFromApi';
 import { useRouter } from 'next/navigation';
 
 function NavBar() {
@@ -11,10 +10,7 @@ function NavBar() {
     const [SearchTerm, setSearchTerm] = useState<any>('');
     
     const handleOnSubmit = async () =>{
-        // const data = await FetchFromApi('12','title','all',SearchTerm);
-        // console.log(data)
         navigate.push(`/search/${SearchTerm}`)
-
     }
 
   return (

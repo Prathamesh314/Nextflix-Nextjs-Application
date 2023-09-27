@@ -4,8 +4,6 @@ import categories from '../data/categories'
 import types from '../data/types'
 import category_ids from '../data/category_ids';
 import { FetchFromApi } from '../constants/FetchFromApi';
-import axios from 'axios';
-import { NextResponse } from 'next/server';
 import Loader from '../Loader';
 import Feed from '../Feed/Feed';
 
@@ -13,8 +11,6 @@ function SideBar() {
   const [selectedIndex, setSlectedIndex] = useState<any>('Movie');
   const [genre, setGenre] = useState<any>('Action');
   const [videos, setVideos] = useState([]);
-  const [posters, setposters] = useState<any>(null);
-  // console.log(selectedIndex)
 
   let val = "";
 
@@ -37,12 +33,16 @@ function SideBar() {
     FetchFromApi(val, "filters", lc, "")
       .then((data) => {
         setVideos(data)
+        
       })
+      console.log("Hello");
   }, [genre]);
-  // console.log(videos)
+
+  
+  
 
   return (
-    <div className="p-2 flex m-0">
+    <div className="p-2 flex m-0 w-screen">
       <div>
         <div>
           <h2 className='pl-12 mb-2 italic text-[22px] font-semibold cursor-pointer underline decoration-wavy text-black'>Categories</h2>
@@ -68,7 +68,7 @@ function SideBar() {
         </div>
       </div>
 
-      <div className='pl-5 mt-0 p-0'>
+      <div className='pl-5 mt-0 p-0 w-full'>
           {/* <Feed videos={videos}/> */}
           {videos.length==0?(<Loader/>):(<Feed videos={videos} />)}
       </div>

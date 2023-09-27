@@ -7,18 +7,17 @@ import axios from 'axios';
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-const searchPage = () => {
+const searchPage = ({params}:{params:any}) => {
 
   const [SearchResults, setSearchResults] = useState<any>([]);
-
-    const router = useParams()
-    let title = router.searchTerm;
+  
+    let title = params.searchTerm;
 
     const [posters, setposters] = useState<any>('');
 
       useEffect(()=>{
         axios.get(`https://www.omdbapi.com/?t=${title}&apikey=de71f961`).then((data)=>setposters(data))
-      })
+      },[title])
       
       let genre = posters.data
       let myarray = [];
