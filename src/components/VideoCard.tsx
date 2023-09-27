@@ -9,11 +9,14 @@ const VideoCard = ({title}:{title:string}) => {
   useEffect(()=>{
     axios.get(`https://www.omdbapi.com/?t=${title}&apikey=de71f961`).then((data)=>setposters(data))
   })
-  // console.log(posters.data)
+  
   let imageurl = '';
   if(posters.data!=undefined){
     imageurl = posters.data.Poster;
   }else{
+    imageurl = '/public/posterimage.png'
+  }
+  if(imageurl == "N/A"){
     imageurl = '/public/posterimage.png'
   }
   return (
