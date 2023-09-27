@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { UserButton } from "@clerk/nextjs";
 import { useRouter } from 'next/navigation';
+import favicon from '../app/favicon.ico'
 
 function NavBar() {
 
@@ -14,9 +15,9 @@ function NavBar() {
     }
 
   return (
-    <div className='flex w-full h-24 items-center justify-between bg-blue-300'>
+    <div className='flex w-full h-24 items-center justify-between bg-gray-800'>
         <div className='flex p-2'>
-            <Image src="/logo.png" alt="logo" width={80} height={30} className='rounded-xl cursor-pointer ml-3 hover:animate-bounce transition-all'/>
+            <Image src={favicon} alt="logo" width={70} height={30} className='rounded-xl cursor-pointer ml-3 hover:animate-bounce transition-all'/>
             <h2 className='font-sans mt-5 font-semibold ml-2 text-[28px] italic cursor-pointer hover:text-gray-400 hover:animate-ping transition-all text-red-500'>Nextflix</h2>
         </div>
         <div className='flex mt-2'>

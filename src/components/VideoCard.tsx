@@ -10,6 +10,10 @@ const VideoCard = ({title}:{title:string}) => {
     axios.get(`https://www.omdbapi.com/?t=${title}&apikey=de71f961`).then((data)=>setposters(data))
   },[title])
 
+  const handleOnSubmit = () =>{
+
+  }
+
   const getposters = ():string =>{
     if(posters.data!=undefined && posters.data.Poster!="N/A"){
       return posters.data.Poster;

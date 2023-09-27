@@ -45,11 +45,11 @@ function SideBar() {
     <div className="p-2 flex m-0 w-screen">
       <div>
         <div>
-          <h2 className='pl-12 mb-2 italic text-[22px] font-semibold cursor-pointer underline decoration-wavy text-black'>Categories</h2>
+          <h2 className='pl-12 mb-2 italic text-[22px] font-semibold cursor-pointer underline decoration-wavy text-white'>Categories</h2>
         </div>
-        <div className='grid grid-row-20 grid-flow-row mt-4'>
+        <div className='grid grid-row-20 grid-flow-row mt-4 '>
           {types.map((item, index) => (
-            <button key={item} className={`row-span-1 h-10 w-50 text-lg rounded-xl mb-2 hover:bg-green-700 hover:scale-75 transition-all ${item == selectedIndex ? 'border-yellow-400 border-[2px] bg-green-800' : 'bg-purple-950'}`}
+            <button key={index} className={`row-span-1 h-10 w-50 text-lg rounded-xl mb-2 hover:bg-green-700 hover:scale-75 transition-all ${item == selectedIndex ? 'border-yellow-400 border-[2px] bg-green-800' : 'bg-purple-950'}`}
               onClick={() => setSlectedIndex(item)}
             >
               <h2>{item}</h2>
@@ -59,7 +59,7 @@ function SideBar() {
         <hr className='h-[2px] my-2 bg-gray-900 border-1 dark:bg-gray-700' />
         <div className='grid grid-row-20 grid-flow-row mt-4'>
           {categories.map((item, index) => (
-            <button key={item} className={`row-span-1 h-10 w-50 text-lg rounded-xl bg-purple-950 mb-2 hover:bg-red-700 hover:scale-75 transition-all ${item == genre ? 'border-yellow-400 border-[2px] bg-red-600' : 'bg-purple-950'}`}
+            <button key={index} className={`row-span-1 h-10 w-50 text-lg rounded-xl bg-purple-950 mb-2 hover:bg-red-700 hover:scale-75 transition-all ${item == genre ? 'border-yellow-400 border-[2px] bg-red-600' : 'bg-purple-950'}`}
               onClick={() => setGenre(item)}
             >
               {item}
@@ -69,7 +69,6 @@ function SideBar() {
       </div>
 
       <div className='pl-5 mt-0 p-0 w-full'>
-          {/* <Feed videos={videos}/> */}
           {videos.length==0?(<Loader/>):(<Feed videos={videos} />)}
       </div>
     </div>
