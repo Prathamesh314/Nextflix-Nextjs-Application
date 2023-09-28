@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import VideoCard from './VideoCard';
 
 const Videos =  ({videos}:{videos:any}) => {
