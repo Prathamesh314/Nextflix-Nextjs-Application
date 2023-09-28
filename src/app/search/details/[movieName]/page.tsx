@@ -1,3 +1,4 @@
+"use client"
 import { FetchPostersFromApi } from '@/components/constants/FetchPostersFromApi';
 import axios from 'axios';
 import Image from 'next/image';
@@ -24,7 +25,7 @@ const DescriptionPage = ({params}:{params:any}) => {
           <Image src={getposters()} alt="Movie Poster" width={80} height={80}/>
         </div>
         <div>
-          
+
         </div>
     </div>
   )
