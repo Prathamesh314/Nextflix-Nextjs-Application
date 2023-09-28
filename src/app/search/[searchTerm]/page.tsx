@@ -29,9 +29,7 @@ const searchPage = ({params}:{params:any}) => {
         genre = "Action";
       }
 
-
       let val = "12";
-
 
       for (const [key, value] of Object.entries(category_ids)) {
         if (genre === key) {
@@ -39,7 +37,6 @@ const searchPage = ({params}:{params:any}) => {
           break;
         }
       }
-
 
       useEffect(()=>{
         FetchFromApi(val,"title","all",title).then((data)=>setSearchResults(data));

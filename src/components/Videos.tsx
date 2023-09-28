@@ -2,7 +2,8 @@ import React, { use } from 'react'
 import VideoCard from './VideoCard';
 
 const Videos =  ({videos}:{videos:any}) => {
-  
+
+ 
   const videolist = videos.result;
   return (
     <div>
