@@ -10,15 +10,19 @@ function NavBar() {
     const navigate = useRouter()
     const [SearchTerm, setSearchTerm] = useState<any>('');
     
-    const handleOnSubmit = async () =>{
+    const handleOnSubmit = () =>{
         navigate.push(`/search/${SearchTerm}`)
+    }
+
+    const takeToHomePage = () =>{
+        navigate.push('/')
     }
 
   return (
     <div className='flex w-full h-24 items-center justify-between bg-gray-800'>
         <div className='flex p-2'>
-            <Image src={favicon} alt="logo" width={70} height={30} className='rounded-xl cursor-pointer ml-3 hover:animate-bounce transition-all'/>
-            <h2 className='font-sans mt-5 font-semibold ml-2 text-[28px] italic cursor-pointer hover:text-gray-400 hover:animate-ping transition-all text-red-500'>Nextflix</h2>
+            <Image src={favicon} alt="logo" width={70} height={30} className='rounded-xl cursor-pointer ml-3 hover:animate-bounce transition-all'  onClick={takeToHomePage}/>
+            <h2 className='font-sans mt-5 font-semibold ml-2 text-[28px] italic cursor-pointer hover:text-gray-100 hover:animate-out transition-all text-red-500'>Nextflix</h2>
         </div>
         <div className='flex mt-2'>
             <div className='flex items-center justify-center mr-8'>
