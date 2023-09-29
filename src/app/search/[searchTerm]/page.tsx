@@ -4,7 +4,6 @@ import Loader from '@/components/Loader';
 import { FetchFromApi } from '@/components/constants/FetchFromApi';
 import category_ids from '@/components/data/category_ids';
 import axios from 'axios';
-import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 const searchPage = ({params}:{params:any}) => {

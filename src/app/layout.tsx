@@ -21,12 +21,15 @@ export default function RootLayout({
     <ClerkProvider appearance={{
       baseTheme: dark
     }}>
-      <html lang="en">
-        <body className={inter.className}>
-          <NavBar/>
-          {children}
-        </body>
-      </html>
+      
+        <html lang="en">
+          <body className={inter.className}>
+            <NavBar/>
+            {children}
+          </body>
+        </html>
+      
+      
     </ClerkProvider>
   )
 }

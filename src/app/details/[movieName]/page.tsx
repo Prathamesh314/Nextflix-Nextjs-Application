@@ -1,5 +1,4 @@
 "use client"
-import { FetchPostersFromApi } from '@/components/constants/FetchPostersFromApi';
 import axios from 'axios';
 import Image from 'next/image';
 import React,{ useEffect, useState } from 'react'
@@ -13,7 +12,7 @@ const DescriptionPage = ({params}:{params:any}) => {
   },[title])
 
   const getposters = ():string =>{
-    if(details.data!=undefined && details.data.Poster!="N/A"){
+    if(details!=undefined && details.data.Poster!="N/A"){
       return details.data.Poster;
     }
     return  '/defaultPoster.jpeg'
