@@ -24,7 +24,7 @@ const PopUpCard = ({details,children}:{details:any,children:React.ReactNode}) =>
         <DialogHeader>
           <DialogTitle className="text-black">{Title}</DialogTitle>
           <DialogDescription>
-          <div className="text-black">
+          <div className="text-black gap-5">
               <div className="relative w-50 aspect-video">
                 <Image src={Poster} alt="Movie Poster" fill className="object-contain object-center"/>
               </div>
@@ -43,11 +43,14 @@ const PopUpCard = ({details,children}:{details:any,children:React.ReactNode}) =>
                 </div>
                 <h2><span className="font-semibold">Languages: </span>{Language}</h2>
               </div>
-              <div>
+              <div className="flex justify-between">
                 {Ratings?.map((item:any,index:any)=>(
                   <div key={index}>
-                    <h2>
+                    <h2 className="gap-x-3">
                     <span className="font-semibold">Source: </span>{item.Source}
+                    </h2>
+                    <h2>
+
                     <span className="font-semibold">Rating: </span>{item.Value}
                     </h2>
                   </div>
