@@ -1,4 +1,4 @@
-
+import { useEffect, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -11,9 +11,10 @@ import {
 import { Button } from "./ui/button"
 import Image from "next/image";
 
-const PopUpCard = async ({details,children}:{details:any,children:React.ReactNode}) => {
-    console.log(details.data);
-    const {Title, Year, Rated,Released, Runtime,Genre,Director,Writer,Actors,Plot,Language,Awards,Poster,Ratings,imdbRating,imdbVotes,BoxOffice} = await details.data;
+const PopUpCard = ({details,children}:{details:any,children:React.ReactNode}) => {
+    console.log(details);
+
+    const {Title, Year, Rated,Released, Runtime,Genre,Director,Writer,Actors,Plot,Language,Awards,Poster,Ratings,imdbRating,imdbVotes,BoxOffice} = details;
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -21,11 +22,11 @@ const PopUpCard = async ({details,children}:{details:any,children:React.ReactNod
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>{Title}</DialogTitle>
+          <DialogTitle className="text-black">{Title}</DialogTitle>
           <DialogDescription>
-            <div>
-              <div>
-                <Image src={Poster} alt="Movie Poster"/>
+          <div className="text-black">
+              <div className="relative w-50 aspect-video">
+                <Image src={Poster} alt="Movie Poster" fill className="object-contain object-center"/>
               </div>
               <div>
                 <h2>Year: {Year}</h2>
@@ -43,7 +44,7 @@ const PopUpCard = async ({details,children}:{details:any,children:React.ReactNod
                 <h2>Languages: {Language}</h2>
               </div>
               <div>
-                {Ratings.map((item:any,index:any)=>(
+                {Ratings?.map((item:any,index:any)=>(
                   <div key={index}>
                     <h2>
                       Source: {item.Source}
@@ -53,7 +54,7 @@ const PopUpCard = async ({details,children}:{details:any,children:React.ReactNod
                 ))}
               </div>
               <div>
-                <h2>Imdab Rating: {imdbRating}</h2>
+                <h2>Imdb Rating: {imdbRating}</h2>
                 <h2>Total People Votes: {imdbVotes}</h2>
                 <h2>Box Office: {BoxOffice}</h2>
               </div>
@@ -78,3 +79,4 @@ const PopUpCard = async ({details,children}:{details:any,children:React.ReactNod
 }
 
 export default PopUpCard
+{/*  */}
