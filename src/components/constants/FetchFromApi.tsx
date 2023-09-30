@@ -16,7 +16,7 @@ const options = (abcd: string, ktype:string,show: string, name: string | string[
     genres_relation: 'and',
   },
   headers: {
-    'X-RapidAPI-Key': '5e609e788emsh00a312c9b84c741p1bc1edjsn6414bf9a6266',
+    'X-RapidAPI-Key': '243205e4bamshcfacf3829209f1ep1a2c01jsnf392d792be07',
     'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
   }
 });

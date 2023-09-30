@@ -25,10 +25,13 @@ function NavBar() {
         </div>
         <div className='flex mt-2'>
             <div className='flex items-center justify-center mr-8'>
-                <input type='text' className='block sm:w-[300px] font-serif rounded-2xl p-2 text-black' placeholder='Search...' onChange={(e)=>setSearchTerm(e.target.value)}/>
-                <button onClick={()=>{handleOnSubmit()}}>
-                    <h2 className='w-15 text-3xl p-1 mr-4 items-center hover:scale-125 rounded-2xl transition-all'>🔍</h2>
-                </button>
+                <div className='flex bg-white rounded-lg mr-3'>
+                    <input type='text' className='block sm:w-[300px] font-serif rounded-2xl p-2 text-black' placeholder='Search...' onChange={(e)=>setSearchTerm(e.target.value)}/>
+                    <button onClick={()=>{handleOnSubmit()}}>
+                        <h2 className='w-15 text-3xl p-1 mr-4 items-center hover:scale-125 rounded-2xl transition-all'>🔍</h2>
+                    </button>
+                </div>
+                
                 <UserButton afterSignOutUrl="/"/>
             </div>    
         </div>
