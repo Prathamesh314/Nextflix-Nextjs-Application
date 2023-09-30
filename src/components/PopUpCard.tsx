@@ -29,40 +29,40 @@ const PopUpCard = ({details,children}:{details:any,children:React.ReactNode}) =>
                 <Image src={Poster} alt="Movie Poster" fill className="object-contain object-center"/>
               </div>
               <div>
-                <h2>Year: {Year}</h2>
-                <h2>Duration: {Runtime}</h2>
-                <h2>Released Date: {Released}</h2>
+                <h2><span className="font-semibold">Year: </span>{Year}</h2>
+                <h2><span className="font-semibold">Duration: </span>{Runtime}</h2>
+                <h2><span className="font-semibold">Released Date: </span>{Released}</h2>
               </div>
               <div>
-                <h2>Genre: {Genre}</h2>
-                <h2>Rated: {Rated}</h2>
-                <h2>Awards: {Awards}</h2>
+                <h2><span className="font-semibold">Genre: </span>{Genre}</h2>
+                <h2><span className="font-semibold">Rated: </span>{Rated}</h2>
+                <h2><span className="font-semibold">Awards: </span>{Awards}</h2>
                 <div>
-                  <h2>Director: {Director}</h2>
-                  <h2>Writer: {Writer}</h2>
+                  <h2><span className="font-semibold">Director: </span>{Director}</h2>
+                  <h2><span className="font-semibold">Writer: </span>{Writer}</h2>
                 </div>
-                <h2>Languages: {Language}</h2>
+                <h2><span className="font-semibold">Languages: </span>{Language}</h2>
               </div>
               <div>
                 {Ratings?.map((item:any,index:any)=>(
                   <div key={index}>
                     <h2>
-                      Source: {item.Source}
-                      Rating: {item.Value}
+                    <span className="font-semibold">Source: </span>{item.Source}
+                    <span className="font-semibold">Rating: </span>{item.Value}
                     </h2>
                   </div>
                 ))}
               </div>
               <div>
-                <h2>Imdb Rating: {imdbRating}</h2>
-                <h2>Total People Votes: {imdbVotes}</h2>
-                <h2>Box Office: {BoxOffice}</h2>
+                <h2><span className="font-semibold">IMDB Rating: </span>{imdbRating}</h2>
+                <h2><span className="font-semibold">Total People Vote on IMDB: </span>{imdbVotes}</h2>
+                <h2><span className="font-semibold">BoxOffice Collection: </span>{BoxOffice}</h2>
               </div>
               <div>
-                <h2>Actors: {Actors}</h2>
+                <h2><span className="font-semibold">Actors: </span>{Actors}</h2>
               </div>
               <div>
-                <h2>Story: {Plot}</h2>
+                <h2><span className="font-semibold">Storyline: </span>{Plot}</h2>
               </div>
             </div>
             
