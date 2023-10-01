@@ -42,7 +42,8 @@ Website will start on "localhost:3000"
   - 1. Close website and come next after 2 pm, if you have a good luck you will be able to use site
   - 2. This is better way to use website, follow this instructions :-
     - a. Create an account in Rapid API and search for movies API called :- **Streaming Availability**
-    - b. Looks like this :- <img src="/public/api-logo.png" alt="api logo" width="60px" height="30px"/>
+    - b. Looks like this :-
+    - <img src="/public/api-logo.png" alt="api logo" width="60px" height="30px"/>
     - c. Take the subscription of the endpoint Free or Whatever you want and inside code snippet you will **X-RapidAPI-Key**,copy the key.
     - d. Come to this application, navigate to **src/component/constants/FetchFromApi.tsx** paste your key their and restart the application
 
