@@ -26,7 +26,7 @@ const VideoCard = ({title}:{title:string}) => {
 
   return (
     <div>
-      <div className='flex flex-col h-60 w-60 rounded-md hover:scale-105  transition-all bg-gray-900 shadow-lg shadow-blue-950 p-[10px] justify-around'>
+      <div className='flex flex-col h-60 w-60 @apply bg-custom-image rounded-md hover:scale-105  transition-all bg-black shadow-lg shadow-blue-950 p-[10px] justify-around'>
         <Image src={getposters()} width='100' height='60' alt={title} className='justify-center w-[200px] h-[160px] pl-[35px]'/>
         {posters?.data && <PopUpCard details={posters?.data}>
           <p className='font-Mooli w-[200px] text-white flex justify-between font-semibold pl-[25px] cursor-pointer'>{title}</p>

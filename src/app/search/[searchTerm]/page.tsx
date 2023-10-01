@@ -39,14 +39,14 @@ const searchPage = ({params}:{params:any}) => {
 
       useEffect(()=>{
         FetchFromApi(val,"title","all",title).then((data)=>setSearchResults(data));
-      })
+      },[title])
 
       // console.log(SearchResults)
       
 
   return (
-    <div className='text-black font-semibold'>
-      {SearchResults.length==0?<Loader/>:<Feed videos={SearchResults} />}      
+    <div className='text-white font-semibold '>
+      {SearchResults.length==0?<Loader/>:<Feed videos={SearchResults}/>}      
     </div>
   )
 }

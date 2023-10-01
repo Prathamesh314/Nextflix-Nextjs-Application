@@ -20,6 +20,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to right, #1C1C20, #131c28, #161515)
+  /* background: linear-gradient(to right, #1C1C20, #131c28, #161515) */
+  background: rgb(18, 17, 17)
 
+}
+
+.bg-custom-image {
+  background-image: url('/bg-img.jpg'); /* Replace 'your-image-url.jpg' with your actual image URL */
+  background-size: cover;
+  background-position: center center;
 }
