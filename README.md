@@ -44,7 +44,7 @@ Website will start on "localhost:3000"
     - a. Create an account in Rapid API and search for movies API called :- **Streaming Availability**
     - b. Looks like this :-
       <img src="/public/api-logo.png" alt="api logo" width="320px" height="60px"/>
-    - c. Take the subscription of the endpoint Free or Whatever you want and inside code snippet you will **X-RapidAPI-Key**,copy the key.
+    - c. Take the subscription of the endpoint Free or Whatever you want and inside code snippet you will have **X-RapidAPI-Key**,copy the key.
     - d. Come to this application, navigate to **src/component/constants/FetchFromApi.tsx** paste your key their and restart the application
 
 
