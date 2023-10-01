@@ -48,3 +48,37 @@ Website will start on "localhost:3000"
     - d. Come to this application, navigate to **src/component/constants/FetchFromApi.tsx** paste your key their and restart the application
 
 
+## How it Looks
+
+#### Starting Page
+
+- It is a Login page implemented using Clerk, there was no need of login but for learning purpose I have included it
+- If you don't have an account you need to signup otherwise you won't be redirected to home page
+- After signing up or logging in successfully you will be redirected to Home page
+- You can choose movies of different categories and also search a specific movies
+- You can see details about particular movie by clicking on its name
+  
+
+#### Here are some Screenshots about my Website
+
+<table>
+    <tr>
+        <th><h1>Opening Page</h1></th>
+        <td>
+            <img src="/public/opening-page.png" src="Opening page" widht="500" height="400"/>
+        </td>
+    </tr>
+    <tr>
+        <th><h1>Home Page</h1></th>
+        <td>
+            <img src="/public/Home-page.png" src="Home page" widht="500" height="400"/>
+        </td>
+    </tr>
+    <tr>
+        <th><h1>Search Results</h1></th>
+        <td>
+            <img src="/public/Search-page.png" src="Search page" widht="500" height="400"/>
+        </td>
+    </tr>
+</table>
+
