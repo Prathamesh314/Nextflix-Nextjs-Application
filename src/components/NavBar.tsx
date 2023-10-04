@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { UserButton } from "@clerk/nextjs";
 import { useRouter } from 'next/navigation';
 import favicon from '../app/favicon.ico'
 
@@ -31,8 +30,6 @@ function NavBar() {
                         <h2 className='w-15 text-3xl p-1 mr-4 items-center hover:scale-125 rounded-2xl transition-all'>🔍</h2>
                     </button>
                 </div>
-                
-                <UserButton afterSignOutUrl="/"/>
             </div>    
         </div>
     </div>
